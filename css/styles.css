@@ -4,46 +4,149 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 a {
     text-decoration: none;
     color: #FFF;
-    font-size: 12px;
+    font-size: 24px;
 }
 
 .navbar ul{
     background-color: #34495E;
-    display: block;
+    display: flex;
+    justify-content: center;
     margin: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+    margin-top: 90px;
 }
 
 .nav {
     display: flex;
-    height: 20px;
     align-items: center;
     background-color: #34495E;
     justify-content: space-between;
-    padding: 50px;
+    position: relative;
 }
 
 .navbar img {
-    height: 80px;
+    height: 160px;
+    z-index: 20;
 }
 
 .nav li {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 60px;
 }
 
 .site-title {
     color: #FFF;
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 32;
+    font-style:normal;
+    font-size: 32px;
+    margin: 0;
+    display: block;
+    cursor: default;
+    user-select: none;
+}
+
+
+.site-title2 {
+    color: yellow;
+    font-family: "Irish Grover", system-ui;
+    font-weight: 64;
+    font-style: normal;
+    font-size: 58px;
+    display: block;
+    margin: 0;
+    margin-top: -30px;
+    cursor: default;
+    user-select: none;
 }
 
 #Leyendasperu {
     text-align: center;
-    width: 100%;
+    width:auto ;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    top: -15px;
+}
+
+.navbar {
+    height: 170px;
+    background-color: #34495E;
+}
+
+.footer {
+    background-color: #34495E;
+    width: 100%;
+    height: 250px;
+    bottom: 0;
+    position: relative;
+    margin-top: auto;
+}
+
+.redes li{
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    align-items: center;
+}
+
+.extra li {
+    display: inline-block;
+    width: 140px;
+    text-align: center;
+    align-items: center;
+}
+
+.extra {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.redes {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.redes a {
+    font-size: 24px;
+}
+
+.extra a {
+    font-size: 18px;
+}
+
+#siguenos {
+    color:#FFF;
+    text-align: center;
+    padding-top: 40px;
+}
+
+#copyright {
+    color: #FFF;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#politicadeprivacidad {
+    border-right-style: solid;
+    border-left-style: solid;
+    border-right-color: #FFF;
+    border-left-color: #FFF;
+}
+
+#preguntasfrecuentes {
+    border-right-style: solid;
+    border-right-color: #FFF;
 }

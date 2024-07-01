@@ -16,16 +16,14 @@ a {
     font-size: 24px;
 }
 
-.navbar ul{
+.navbar {
+    height: 170px;
+    width: 100%;
     background-color: #34495E;
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    margin: 0;
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    z-index: 10;
-    margin-top: 90px;
 }
 
 .nav {
@@ -34,16 +32,32 @@ a {
     background-color: #34495E;
     justify-content: space-between;
     position: relative;
+    flex-direction: row;
+    height: 170px;
+    width: 20%;
 }
 
-.navbar img {
+.nav img {
     height: 160px;
     z-index: 20;
+    object-fit: cover;
 }
 
-.nav li {
-    display: inline-block;
-    margin-left: 60px;
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 170px;
+    width: 60%;
+    position: relative;
+}
+#Leyendasperu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 120px;
+    width:100% ;
+    position: relative;
+    justify-content: center;
 }
 
 .site-title {
@@ -58,7 +72,6 @@ a {
     user-select: none;
 }
 
-
 .site-title2 {
     color: yellow;
     font-family: "Irish Grover", system-ui;
@@ -72,18 +85,48 @@ a {
     user-select: none;
 }
 
-#Leyendasperu {
-    text-align: center;
-    width:auto ;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -15px;
+#navegacion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 170px;
+    position: relative;
 }
 
-.navbar {
-    height: 170px;
+.navbar ul{
     background-color: #34495E;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    pad: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+    flex-direction: row;
+    position: relative;
+    list-style: none;
+}
+
+.navbar li {
+    display: flex;
+    margin: 0 20px;
+    align-items: center;
+}
+
+.boton-nav {
+    display: flex;
+    height: 170px;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-nav i {
+    font-size: 50px;
+}
+
+.boton-nav button {
+    display: none;
 }
 
 .footer {
@@ -93,6 +136,23 @@ a {
     bottom: 0;
     position: relative;
     margin-top: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#siguenos {
+    color:#FFF;
+    text-align: center;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.redes {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .redes li{
@@ -102,6 +162,17 @@ a {
     align-items: center;
 }
 
+.redes a {
+    font-size: 24px;
+}
+
+.extra {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
 .extra li {
     display: inline-block;
     width: 140px;
@@ -109,34 +180,8 @@ a {
     align-items: center;
 }
 
-.extra {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.redes {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.redes a {
-    font-size: 24px;
-}
-
 .extra a {
     font-size: 18px;
-}
-
-#siguenos {
-    color:#FFF;
-    text-align: center;
-    padding-top: 40px;
-}
-
-#copyright {
-    color: #FFF;
-    text-align: center;
-    margin-top: 20px;
 }
 
 #politicadeprivacidad {
@@ -151,3 +196,103 @@ a {
     border-right-color: #FFF;
 }
 
+#copyright {
+    color: #FFF;
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    .boton-nav {
+        display: none;
+    }
+
+    .container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 750px) {
+    .boton-nav button {
+        height: 80px;
+        width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #navegacion {
+        display: none;
+    }
+
+    #Leyendasperu {
+        height: 170px;
+    }
+
+    .container {
+        width: 60%;
+    }
+
+    .boton-nav {
+        display: flex;
+        height: 170px;
+        width: 20%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        height: 50px;
+    }
+
+    #navegacion {
+        display: none;
+    }
+
+    #Leyendasperu {
+        height: 50px;
+        left: 0;
+        width: 40%;
+    }
+    .site-title {
+        font-size: 12px;
+        margin-top: 0;
+        height: 50%;
+
+    }
+
+    .site-title2 {
+        font-size: 18px;
+        margin: 0;
+        height: 50%;
+
+    }
+    .nav {
+        display: none;
+    }
+
+    
+    .boton-nav {
+        width: 15%;
+        height: 50px;
+    }
+
+    .boton-nav button {
+        width: 40px;
+        height: 40px;
+        display: flex;
+    }
+
+    .boton-nav i {
+        font-size: 20px;
+    }
+
+    .container {
+        height: 50px;
+        width: 85%;
+    }
+}

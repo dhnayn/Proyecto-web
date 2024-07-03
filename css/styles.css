@@ -129,6 +129,10 @@ a {
     display: none;
 }
 
+main {
+    flex: 1;
+}
+
 .footer {
     background-color: #34495E;
     width: 100%;
